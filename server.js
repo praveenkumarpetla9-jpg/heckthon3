@@ -12,11 +12,7 @@ import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
-const path = reqire("path");
-app.use(express.static(__dirname));
-app.get("/",(req,res) => {
-  res.sendFile(path.join(__dirname,"index.html"));
-});
+
 const PORT = process.env.PORT || 3001;
 
 // ── Anthropic Client ───────────────────────────────────────────────────────
