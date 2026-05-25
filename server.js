@@ -12,6 +12,11 @@ import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 
 const PORT = process.env.PORT || 3001;
 
